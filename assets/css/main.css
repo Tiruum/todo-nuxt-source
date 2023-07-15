@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .inpt {
+      @apply block w-full px-3 py-2 text-gray-900 dark:bg-gray-700 dark:text-gray-100 rounded-xl text-sm shadow-sm placeholder-slate-400
+      focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500
+      disabled:bg-gray-50 disabled:text-gray-400 disabled:dark:bg-gray-600 disabled:dark:text-gray-300 disabled:shadow-none disabled:cursor-not-allowed
+      invalid:border-pink-500 invalid:text-pink-600
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+    }
+  }
+  
+  ::selection {
+      background: rgba(34, 197, 94, 1);
+      color: #fff;
+  }
+  
+  body {
+      overflow: overlay;
+  }
+  
+  body::-webkit-scrollbar {
+      width: 8px;
+  }
+  
+  ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {
+      background-color: transparent;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+      body::-webkit-scrollbar-thumb {
+          background: rgb(31, 41, 55);
+          border-radius: 8px;
+      }
+  
+      ::-webkit-scrollbar-thumb {
+          background: rgb(55, 65, 81);
+          border-radius: 8px;
+      }
+  }
+  @media (prefers-color-scheme: light) {
+      body::-webkit-scrollbar-thumb {
+          background: #fff;
+          border-radius: 8px;
+      }
+  
+      ::-webkit-scrollbar-thumb {
+          background: rgb(243, 244, 246);
+          border-radius: 8px;
+      }
+  }
